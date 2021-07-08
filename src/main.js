@@ -1,11 +1,12 @@
-import RouterCache from './routerCache'
+import RouterCache from './routerCache';
 
-let isInstall = false
+let isInstall = false;
 
 RouterCache.install = function (Vue) {
-    if (isInstall) { return }
-    Vue.component('router-cache', RouterCache)
+    if (isInstall) { return; };
+    isInstall = true;
+    Vue.component(RouterCache.name, RouterCache);
 }
 
 
-export default RouterCache
+export default RouterCache;
