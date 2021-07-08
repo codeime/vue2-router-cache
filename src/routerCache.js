@@ -24,6 +24,7 @@ export default {
     name: 'router-cache',
     abstract: true,
     props: {
+        // @deprecated
         init: {
             type: Function,
             default: () => { }
@@ -35,7 +36,13 @@ export default {
     },
     created() {
         this.cache = Object.create(null);
+        // @deprecated 后面废弃
         this.init({
+            removeCache: (key) => {
+                this.removeCache(key);
+            }
+        })
+        this.$emit('init', {
             removeCache: (key) => {
                 this.removeCache(key);
             }
