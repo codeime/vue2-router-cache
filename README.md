@@ -2,10 +2,13 @@
 
 基于keep-alive更改，可以手动移除路由缓存。
 用于tab页式的路由管理，在移除tab页时销毁该页对应的路由实例
-
+## 安装
+```
+npm i vue2-router-cache
+```
 ## 使用
 
-### 全局安装
+### 全局
 
 ```
 import RouterCache from 'vue2-router-cache';
@@ -13,7 +16,7 @@ import RouterCache from 'vue2-router-cache';
 Vue.use(RouterCache)
 
 ```
-### 局部安装
+### 局部
 ```
 import RouterCache from 'vue2-router-cache';
 
